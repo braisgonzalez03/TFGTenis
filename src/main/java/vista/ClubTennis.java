@@ -162,13 +162,13 @@ public class ClubTennis extends javax.swing.JFrame {
     private void menuPlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPlayersActionPerformed
         // TODO add your handling code here:
         controladorPlayer.iniciar();
-        dispose();
+       // dispose();
     }//GEN-LAST:event_menuPlayersActionPerformed
 
     private void menuTournamentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTournamentsActionPerformed
         // TODO add your handling code here:
         controladorTournament.iniciar();
-        dispose();
+        //dispose();
     }//GEN-LAST:event_menuTournamentsActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
@@ -179,7 +179,7 @@ public class ClubTennis extends javax.swing.JFrame {
     private void menuInscriptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuInscriptionsActionPerformed
         // TODO add your handling code here:
         controladorInscriptions.iniciar();
-        dispose();
+        //dispose();
     }//GEN-LAST:event_menuInscriptionsActionPerformed
 
     /**
