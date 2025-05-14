@@ -193,7 +193,7 @@ public class controladorPlayer {
                 boolean canDeletePlayer = true;
                 if (p.getInscriptionsList() != null && !p.getInscriptionsList().isEmpty()) {
                     for (Inscriptions inscription : p.getInscriptionsList()) {
-                        if (inscription.getEndDate() != null) {
+                        if (inscription.getEndDate() == null) {
                             canDeletePlayer = false;
                             JOptionPane.showMessageDialog(null, "Cannot delete player because they have active tournament registrations.");
                             break;
