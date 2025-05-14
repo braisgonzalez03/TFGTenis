@@ -177,4 +177,70 @@ public class controladorInscriptions {
         ventana.getJdcStartDate().setDate(null);
         ventana.getJdcEndDate().setDate(null);
     }
+
+    public static void modify() {
+        if (ventana.getTxtInscriptionId().getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Data missing");
+        }
+
+        try {
+            HibernateUtil.beginTx(session);
+            int inscriptionId = Integer.parseInt(ventana.getTxtInscriptionId().getText());
+            Inscriptions i = insDAO.getInscriptionId(session, inscriptionId);
+
+            if (i == null) {
+                JOptionPane.showMessageDialog(null, "Inscription not found");
+                return;
+            }
+
+            Date starDate = i.getStartDate();
+            Date newDateEnd = ventana.getJdcEndDate().getDate();
+            if (newDateEnd != null && newDateEnd.before(starDate)) {
+                JOptionPane.showMessageDialog(null, "End date cannot be before the start date.");
+                return;
+            }
+            
+            insDAO.modified(session, i,newDateEnd);
+            JOptionPane.showMessageDialog(null, "Inscription updated successfully");
+            session.getTransaction().commit();
+            insDAO.getAllInscriptions(session, modelTable, ventana.getLblInscriptions());
+            
+        }catch (NumberFormatException ex1) {
+            session.getTransaction().rollback();
+            JOptionPane.showMessageDialog(null, "Data entry error");
+        } catch (Exception ex2) {
+            session.getTransaction().rollback();
+            Logger.getLogger(controladorInscriptions.class.getName()).log(Level.SEVERE, null, ex2);
+        }
+    }
+
+    public static void delete() {
+        if(ventana.getTxtInscriptionId().getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Data missing");
+            return;
+        }
+        
+        try{
+            HibernateUtil.beginTx(session);
+            int inscriptionId = Integer.parseInt(ventana.getTxtInscriptionId().getText());
+            
+            Inscriptions i = insDAO.getInscriptionId(session, inscriptionId);
+            
+            if(i == null){
+                JOptionPane.showMessageDialog(null, "Inscription not found");
+            }
+            insDAO.delete(session, i);
+            
+            JOptionPane.showMessageDialog(null, "Inscriptions successfully removed");
+            
+            session.getTransaction().commit();
+            insDAO.getAllInscriptions(session, modelTable, ventana.getLblInscriptions());
+        }catch (NumberFormatException ex1) {
+            session.getTransaction().rollback();
+            JOptionPane.showMessageDialog(null, "Data entry error");
+        } catch (Exception ex2) {
+            session.getTransaction().rollback();
+            Logger.getLogger(controladorInscriptions.class.getName()).log(Level.SEVERE, null, ex2);
+        }
+    }
 }

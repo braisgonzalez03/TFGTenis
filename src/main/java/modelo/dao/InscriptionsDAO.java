@@ -87,4 +87,13 @@ public class InscriptionsDAO {
         return session.get(Inscriptions.class, inscriptionsId);
     }
 
+    public void modified(Session session, Inscriptions i, Date newDateEnd) {
+        i.setEndDate(newDateEnd);
+        session.update(i);
+    }
+
+    public void delete(Session session, Inscriptions i) {
+        session.delete(i);
+    }
+
 }

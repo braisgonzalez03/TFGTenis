@@ -93,9 +93,9 @@ public class controladorTournament {
                 JOptionPane.showMessageDialog(null, "Tournament inserted");
 
             }
-            tourDAO.getAllTournament(session, modelTable, ventana.getLblTournament());
-            session.getTransaction().commit();
 
+            session.getTransaction().commit();
+            tourDAO.getAllTournament(session, modelTable, ventana.getLblTournament());
         } catch (NumberFormatException ex) {
             session.getTransaction().rollback();
             JOptionPane.showMessageDialog(null, "Data entry error");
@@ -113,9 +113,9 @@ public class controladorTournament {
 
         try {
             HibernateUtil.beginTx(session);
-            String name = ventana.getTxtName().getText();
+            int tournamentId = Integer.parseInt(ventana.getTxtTournamentId().getText());
 
-            Tournaments t = tourDAO.getTournament(session, name);
+            Tournaments t = tourDAO.getTournamentById(session, tournamentId);
             if (t != null) {
                 String description = ventana.getTxtDescription().getText();
                 String classification = ventana.getTxtClassification().getText();
@@ -128,6 +128,7 @@ public class controladorTournament {
             }
 
             session.getTransaction().commit();
+            tourDAO.getAllTournament(session, modelTable, ventana.getLblTournament());
             JOptionPane.showMessageDialog(null, "Modified tournament");
         } catch (NumberFormatException ex1) {
             session.getTransaction().rollback();
@@ -146,10 +147,9 @@ public class controladorTournament {
 
         try {
             HibernateUtil.beginTx(session);
-            String name = ventana.getTxtName().getText();
+            int tournamentId = Integer.parseInt(ventana.getTxtTournamentId().getText());
 
-
-            Tournaments t = tourDAO.getTournament(session, name);
+            Tournaments t = tourDAO.getTournamentById(session, tournamentId);
 
             if (t != null) {
 
@@ -163,6 +163,7 @@ public class controladorTournament {
                 JOptionPane.showMessageDialog(null, "Tournament don't exists");
             }
             session.getTransaction().commit();
+            tourDAO.getAllTournament(session, modelTable, ventana.getLblTournament());
         } catch (PersistenceException ex) {
             JOptionPane.showMessageDialog(null, "The player cannot be deleted");
             session.getTransaction().rollback();

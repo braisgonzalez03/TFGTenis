@@ -116,6 +116,11 @@ public class InscriptionsManager extends javax.swing.JFrame {
         });
 
         btnModificar.setText("Modificar");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
 
         btnInsertar.setText("Insertar");
         btnInsertar.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +130,11 @@ public class InscriptionsManager extends javax.swing.JFrame {
         });
 
         btnBorrar.setText("Borrar");
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
 
         txtInscriptionId.setText("1");
         txtInscriptionId.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -259,6 +269,16 @@ public class InscriptionsManager extends javax.swing.JFrame {
         // TODO add your handling code here:
         controladorInscriptions.loadData();
     }//GEN-LAST:event_txtInscriptionIdFocusLost
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        // TODO add your handling code here:
+        controladorInscriptions.modify();
+    }//GEN-LAST:event_btnModificarActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        // TODO add your handling code here:
+        controladorInscriptions.delete();
+    }//GEN-LAST:event_btnBorrarActionPerformed
 
     public JButton getBtnBorrar() {
         return btnBorrar;

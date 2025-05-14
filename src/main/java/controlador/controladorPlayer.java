@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.dao.InscriptionsDAO;
 import modelo.dao.PlayersDAO;
+import modelo.vo.Inscriptions;
 import modelo.vo.Players;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -126,6 +127,7 @@ public class controladorPlayer {
             }
 
             session.getTransaction().commit();
+            plaDAO.getAllPlayers(session, modelTable, ventana.getLblNumPlayers());
             JOptionPane.showMessageDialog(null, "Modified player");
         } catch (NumberFormatException ex1) {
             session.getTransaction().rollback();
@@ -150,7 +152,7 @@ public class controladorPlayer {
                 ventana.getTxtName().setText(p.getName());
                 ventana.getTxtSurnames().setText(p.getSurnames());
                 ventana.getTxtEmail().setText(p.getEmail());
-                ventana.getTxtPhone().setText(p.getPhone()+"");
+                ventana.getTxtPhone().setText(p.getPhone() + "");
                 ventana.getTxtDni().setText(p.getDni());
                 ventana.getTxtUserName().setText(p.getUserName());
                 ventana.getTxtPassword().setText(p.getPassword());
@@ -188,17 +190,32 @@ public class controladorPlayer {
             Players p = plaDAO.getPlayerByPlayerId(session, Integer.parseInt(ventana.getTxtPlayerId().getText()));
 
             if (p != null) {
-                if (p.getInscriptionsList() != null) {
-                    insDAO.deleteInscriptions(session, p.getInscriptionsList());
+                boolean canDeletePlayer = true;
+                if (p.getInscriptionsList() != null && !p.getInscriptionsList().isEmpty()) {
+                    for (Inscriptions inscription : p.getInscriptionsList()) {
+                        if (inscription.getEndDate() != null) {
+                            canDeletePlayer = false;
+                            JOptionPane.showMessageDialog(null, "Cannot delete player because they have active tournament registrations.");
+                            break;
+                        }
+                    }
+                    if (canDeletePlayer) {
+                        insDAO.deleteInscriptions(session, p.getInscriptionsList());
+                        plaDAO.delete(session, p);
+                        cleandata();
+                        JOptionPane.showMessageDialog(null, "Inscriptions and Player deleted");
+                    }
+                } else {
+                    plaDAO.delete(session, p);
+                    cleandata();
+                    JOptionPane.showMessageDialog(null, "Player deleted");
                 }
-                plaDAO.delete(session, p);
-                cleandata();
             } else {
-                JOptionPane.showMessageDialog(null, "Player don't exists");
+                JOptionPane.showMessageDialog(null, "Player doesn't exist");
             }
-
             session.getTransaction().commit();
-            JOptionPane.showMessageDialog(null, "Inscription and Player deleted");
+            plaDAO.getAllPlayers(session, modelTable, ventana.getLblNumPlayers());
+
         } catch (PersistenceException ex) {
             JOptionPane.showMessageDialog(null, "The player cannot be deleted");
             session.getTransaction().rollback();
