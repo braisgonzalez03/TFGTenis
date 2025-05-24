@@ -12,6 +12,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPasswordField;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -69,7 +70,6 @@ public class PlayerManager extends javax.swing.JFrame {
         txtPhone = new javax.swing.JTextField();
         txtDni = new javax.swing.JTextField();
         txtUserName = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JTextField();
         btnListar = new javax.swing.JButton();
         btnModificar = new javax.swing.JButton();
         btnInsertar = new javax.swing.JButton();
@@ -77,9 +77,9 @@ public class PlayerManager extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblPlayers = new javax.swing.JTable();
         lblNumPlayers = new javax.swing.JLabel();
+        txtPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(900, 612));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
                 formWindowClosed(evt);
@@ -179,8 +179,8 @@ public class PlayerManager extends javax.swing.JFrame {
                             .addComponent(txtPhone)
                             .addComponent(txtDni)
                             .addComponent(txtUserName)
-                            .addComponent(txtPassword)
-                            .addComponent(txtPlayerId))
+                            .addComponent(txtPlayerId)
+                            .addComponent(txtPassword))
                         .addGap(180, 180, 180)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -305,9 +305,10 @@ public class PlayerManager extends javax.swing.JFrame {
         return txtName;
     }
 
-    public JTextField getTxtPassword() {
+    public JPasswordField getTxtPassword() {
         return txtPassword;
     }
+
 
     public JTextField getTxtPhone() {
         return txtPhone;
@@ -354,7 +355,7 @@ public class PlayerManager extends javax.swing.JFrame {
     private javax.swing.JTextField txtDni;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtPassword;
+    private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtPhone;
     private javax.swing.JTextField txtPlayerId;
     private javax.swing.JTextField txtSurnames;

@@ -4,6 +4,7 @@
  */
 package controlador;
 
+import Encriptacion.HashContraseñas;
 import controlador.factory.HibernateUtil;
 import java.util.List;
 import java.util.logging.Level;
@@ -67,21 +68,32 @@ public class controladorPlayer {
         if (ventana.getTxtPlayerId().getText().isEmpty() || ventana.getTxtName().getText().isEmpty()
                 || ventana.getTxtSurnames().getText().isEmpty() || ventana.getTxtEmail().getText().isEmpty()
                 || ventana.getTxtPhone().getText().isEmpty() || ventana.getTxtDni().getText().isEmpty()
-                || ventana.getTxtUserName().getText().isEmpty() || ventana.getTxtPassword().getText().isEmpty()) {
+                || ventana.getTxtUserName().getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Data missing");
             return;
         }
 
         try {
             HibernateUtil.beginTx(session);
+            
+            char[] password = ventana.getTxtPassword().getPassword();
+            
+            if(password.length == 0){
+                JOptionPane.showMessageDialog(null, "La contraseña está vacía");
+                return; 
+            }
+            
             String dni = ventana.getTxtDni().getText();
             String userName = ventana.getTxtName().getText();
-
+            String passwordText = new String(password);
+            
             Players p = plaDAO.getPlayer(session, dni, userName);
 
             if (p != null) {
                 JOptionPane.showMessageDialog(null, "A player with that DNI or username already exists");
             } else {
+                String passwordEncrypt = HashContraseñas.hashPassword(passwordText);
+                
                 plaDAO.insert(session, Integer.parseInt(ventana.getTxtPlayerId().getText()),
                         ventana.getTxtName().getText(),
                         ventana.getTxtSurnames().getText(),
@@ -89,7 +101,7 @@ public class controladorPlayer {
                         Integer.parseInt(ventana.getTxtPhone().getText()),
                         ventana.getTxtDni().getText(),
                         ventana.getTxtUserName().getText(),
-                        ventana.getTxtPassword().getText());
+                        passwordEncrypt);
 
                 JOptionPane.showMessageDialog(null, "Player inserted");
             }
@@ -108,23 +120,40 @@ public class controladorPlayer {
         if (ventana.getTxtPlayerId().getText().isEmpty() || ventana.getTxtName().getText().isEmpty()
                 || ventana.getTxtSurnames().getText().isEmpty() || ventana.getTxtEmail().getText().isEmpty()
                 || ventana.getTxtPhone().getText().isEmpty() || ventana.getTxtDni().getText().isEmpty()
-                || ventana.getTxtUserName().getText().isEmpty() || ventana.getTxtPassword().getText().isEmpty()) {
+                || ventana.getTxtUserName().getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Data missing");
             return;
         }
+        
+        String finalPassword = null;
         try {
             HibernateUtil.beginTx(session);
+            
+            char[] password = ventana.getTxtPassword().getPassword();
+            
             String dni = ventana.getTxtDni().getText();
             String userName = ventana.getTxtUserName().getText();
-
+            
             Players p = plaDAO.getPlayer(session, dni, userName);
-
+            
+            if(password.length > 0){
+                String passwordEncrypt = new String(password);
+                finalPassword = HashContraseñas.hashPassword(passwordEncrypt);
+            }else{
+                finalPassword = p.getPassword();
+            }
+            
             if (p != null) {
-                plaDAO.modified(session, p, ventana.getTxtEmail().getText(), Integer.parseInt(ventana.getTxtPhone().getText()), ventana.getTxtPassword().getText());
+                plaDAO.modified(session, p, 
+                        ventana.getTxtEmail().getText(), 
+                        Integer.parseInt(ventana.getTxtPhone().getText()), 
+                        finalPassword);
             } else {
                 JOptionPane.showMessageDialog(null, "Player don't exists");
                 return;
             }
+            
+            
 
             session.getTransaction().commit();
             plaDAO.getAllPlayers(session, modelTable, ventana.getLblNumPlayers());
@@ -155,7 +184,6 @@ public class controladorPlayer {
                 ventana.getTxtPhone().setText(p.getPhone() + "");
                 ventana.getTxtDni().setText(p.getDni());
                 ventana.getTxtUserName().setText(p.getUserName());
-                ventana.getTxtPassword().setText(p.getPassword());
             } else {
                 cleandata();
             }
