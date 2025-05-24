@@ -4,31 +4,17 @@
  */
 package vista;
 
-import com.jtattoo.plaf.aluminium.AluminiumLookAndFeel;
-import com.jtattoo.plaf.fast.FastLookAndFeel;
-import com.jtattoo.plaf.graphite.GraphiteLookAndFeel;
-import com.jtattoo.plaf.hifi.HiFiLookAndFeel;
-import com.jtattoo.plaf.luna.LunaLookAndFeel;
-import com.jtattoo.plaf.mcwin.McWinLookAndFeel;
-import com.jtattoo.plaf.mint.MintLookAndFeel;
-import com.jtattoo.plaf.noire.NoireLookAndFeel;
-import com.jtattoo.plaf.smart.SmartLookAndFeel;
 import com.jtattoo.plaf.texture.TextureLookAndFeel;
 import controlador.controladorClubTennis;
 import controlador.controladorInscriptions;
 import controlador.controladorPlayer;
 import controlador.controladorTournament;
-import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.plaf.basic.BasicLookAndFeel;
-import javax.swing.plaf.metal.MetalLookAndFeel;
-import javax.swing.plaf.multi.MultiLookAndFeel;
 
 /**
  *
@@ -79,6 +65,7 @@ public class ClubTennis extends javax.swing.JFrame {
         menuPlayers = new javax.swing.JMenuItem();
         menuTournaments = new javax.swing.JMenuItem();
         menuInscriptions = new javax.swing.JMenuItem();
+        menuJasper = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -141,6 +128,14 @@ public class ClubTennis extends javax.swing.JFrame {
         });
         jMenu1.add(menuInscriptions);
 
+        menuJasper.setText("JasperReports");
+        menuJasper.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuJasperActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuJasper);
+
         jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
@@ -181,6 +176,13 @@ public class ClubTennis extends javax.swing.JFrame {
         controladorInscriptions.iniciar();
         //dispose();
     }//GEN-LAST:event_menuInscriptionsActionPerformed
+
+    private void menuJasperActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuJasperActionPerformed
+        // TODO add your handling code here:
+        MainJasper main = new MainJasper();
+        main.setVisible(true);
+        main.setLocationRelativeTo(null);
+    }//GEN-LAST:event_menuJasperActionPerformed
 
     /**
      * @param args the command line arguments
@@ -230,6 +232,7 @@ public class ClubTennis extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuItem menuInscriptions;
+    private javax.swing.JMenuItem menuJasper;
     private javax.swing.JMenuItem menuPlayers;
     private javax.swing.JMenuItem menuTournaments;
     // End of variables declaration//GEN-END:variables

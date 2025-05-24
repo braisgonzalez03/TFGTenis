@@ -11,7 +11,7 @@
         <property name="hibernate.connection.url">jdbc:mysql://192.168.56.101:3306/clubtenis?zeroDateTimeBehavior=CONVERT_TO_NULL</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">root</property>
-        <property name="hibernate.default_schema">BD</property> <!--2.- Pon aqui la BD -->
+        <property name="hibernate.default_schema">clubtenis</property> <!--2.- Pon aqui la BD -->
         <property name="hibernate.connection.autocommit">false</property>
         <property name="hibernate.current_session_context_class">thread</property> 
         <property name="hibernate.show_sql">true</property>
