@@ -11,8 +11,7 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
-import reports.ReportService;
-import reports.SavePdfChooser;
+import reportsService.ReportService;
 
 /**
  *
@@ -20,7 +19,7 @@ import reports.SavePdfChooser;
  */
 public class MainJasper extends javax.swing.JFrame {
 
-    private static final String REPORT_PATH = "/reports/Players.jrxml";
+    private static final String REPORT_PATH = "/reports/players.jrxml";
 
     private final ReportService reportService;
 
@@ -40,11 +39,10 @@ public class MainJasper extends javax.swing.JFrame {
             this.dispose();
         }
 
-        String url = prop.getProperty("url");
-        String username = prop.getProperty("username"); // ojo que sea 'user' y no 'username' en el archivo
-        String password = prop.getProperty("password");
-
-        reportService = new ReportService(url, username, password);
+        reportService = new ReportService(
+        prop.getProperty("dburl"),
+        prop.getProperty("dbuser"),
+        prop.getProperty("dbpassword"));
 
         try {
             Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/pelota.png"));
@@ -126,7 +124,35 @@ public class MainJasper extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnViewAndSaveActionPerformed
 
+ public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(MainJasper.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(MainJasper.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(MainJasper.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MainJasper.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(() -> {
+            new MainJasper().setVisible(true);
+        });
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnView;

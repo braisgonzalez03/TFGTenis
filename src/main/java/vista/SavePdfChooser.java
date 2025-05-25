@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package reports;
+package vista;
 
 import java.awt.Component;
 import java.io.File;
@@ -16,7 +16,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  * @author brais
  */
 public class SavePdfChooser {
-    private final JFileChooser chooser;
+     private final JFileChooser chooser;
     private final Component parent;
 
     public SavePdfChooser(Component parent) {

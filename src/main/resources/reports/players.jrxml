@@ -1,105 +1,91 @@
-<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
-<jasperReport name="Players" language="java" pageWidth="595" pageHeight="842" columnWidth="555"
-    leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="46970bb5-07cb-41ee-940a-944b7b736013">
-
-    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="192.168.56.101:3306/clubtenis"/>
-
-    <query language="SQL"><![CDATA[
-        SELECT player_id, name, surnames, email, phone, dni, user_name, password
-        FROM Players
-        ORDER BY player_id ASC
-    ]]></query>
-
-    <field name="player_id" class="java.lang.Integer"/>
-    <field name="name" class="java.lang.String"/>
-    <field name="surnames" class="java.lang.String"/>
-    <field name="email" class="java.lang.String"/>
-    <field name="phone" class="java.lang.String"/>
-    <field name="dni" class="java.lang.String"/>
-    <field name="user_name" class="java.lang.String"/>
-    <field name="password" class="java.lang.String"/>
-
-    <title>
-        <band height="40">
-            <staticText>
-                <reportElement x="0" y="5" width="555" height="30"/>
-                <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font size="18" isBold="true"/>
-                </textElement>
-                <text><![CDATA[Players Report]]></text>
-            </staticText>
-        </band>
-    </title>
-
-    <columnHeader>
-        <band height="30">
-            <staticText>
-                <reportElement x="0" y="5" width="60" height="20"/>
-                <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font isBold="true" size="12"/>
-                </textElement>
-                <text><![CDATA[ID]]></text>
-            </staticText>
-            <staticText>
-                <reportElement x="65" y="5" width="120" height="20"/>
-                <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font isBold="true" size="12"/>
-                </textElement>
-                <text><![CDATA[Name]]></text>
-            </staticText>
-            <staticText>
-                <reportElement x="190" y="5" width="150" height="20"/>
-                <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font isBold="true" size="12"/>
-                </textElement>
-                <text><![CDATA[Surnames]]></text>
-            </staticText>
-            <staticText>
-                <reportElement x="345" y="5" width="130" height="20"/>
-                <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font isBold="true" size="12"/>
-                </textElement>
-                <text><![CDATA[Email]]></text>
-            </staticText>
-            <staticText>
-                <reportElement x="480" y="5" width="75" height="20"/>
-                <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font isBold="true" size="12"/>
-                </textElement>
-                <text><![CDATA[User]]></text>
-            </staticText>
-        </band>
-    </columnHeader>
-
-    <detail>
-        <band height="25">
-            <textField>
-                <reportElement x="0" y="0" width="60" height="25"/>
-                <textElement textAlignment="Center" verticalAlignment="Middle"/>
-                <textFieldExpression><![CDATA[$F{player_id}]]></textFieldExpression>
-            </textField>
-            <textField>
-                <reportElement x="65" y="0" width="120" height="25"/>
-                <textElement verticalAlignment="Middle"/>
-                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
-            </textField>
-            <textField>
-                <reportElement x="190" y="0" width="150" height="25"/>
-                <textElement verticalAlignment="Middle"/>
-                <textFieldExpression><![CDATA[$F{surnames}]]></textFieldExpression>
-            </textField>
-            <textField>
-                <reportElement x="345" y="0" width="130" height="25"/>
-                <textElement verticalAlignment="Middle"/>
-                <textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
-            </textField>
-            <textField>
-                <reportElement x="480" y="0" width="75" height="25"/>
-                <textElement verticalAlignment="Middle"/>
-                <textFieldExpression><![CDATA[$F{user_name}]]></textFieldExpression>
-            </textField>
-        </band>
-    </detail>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="Players" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="192.168.56.101/clubtenis"/>
+	<query language="SQL"><![CDATA[SELECT * FROM players ORDER BY name ASC]]></query>
+	<field name="player_id" class="java.lang.Integer"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="surnames" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="phone" class="java.lang.Integer"/>
+	<field name="dni" class="java.lang.String"/>
+	<field name="user_name" class="java.lang.String"/>
+	<field name="password" class="java.lang.String"/>
+	<title height="55" splitType="Stretch">
+		<staticText>
+			<reportElement x="0" y="12" width="555" height="30"/>
+			<textElement textAlignment="Center" verticalAlignment="Middle">
+				<font size="19" isBold="true"/>
+			</textElement>
+			<text><![CDATA[Lista de Jugadores]]></text>
+		</staticText>
+	</title>
+	<columnHeader>
+		<band height="30">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="30"/>
+				<textElement verticalAlignment="Middle"><font isBold="true"/></textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="100" height="30"/>
+				<textElement verticalAlignment="Middle"><font isBold="true"/></textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="0" width="100" height="30"/>
+				<textElement verticalAlignment="Middle"><font isBold="true"/></textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="100" height="30"/>
+				<textElement verticalAlignment="Middle"><font isBold="true"/></textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="80" height="30"/>
+				<textElement verticalAlignment="Middle"><font isBold="true"/></textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="125" height="30"/>
+				<textElement verticalAlignment="Middle"><font isBold="true"/></textElement>
+				<text><![CDATA[DNI]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{player_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{surnames}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="80" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="125" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
 </jasperReport>
-
