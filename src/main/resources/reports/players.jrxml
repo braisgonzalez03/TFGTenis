@@ -1,54 +1,81 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jasperReport name="Players" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
-	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+<jasperReport name="Players" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="46970bb5-07cb-41ee-940a-944b7b736013">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="players"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="192.168.56.101/clubtenis"/>
 	<query language="SQL"><![CDATA[SELECT * FROM players ORDER BY name ASC]]></query>
-	<field name="player_id" class="java.lang.Integer"/>
-	<field name="name" class="java.lang.String"/>
-	<field name="surnames" class="java.lang.String"/>
-	<field name="email" class="java.lang.String"/>
-	<field name="phone" class="java.lang.Integer"/>
-	<field name="dni" class="java.lang.String"/>
-	<field name="user_name" class="java.lang.String"/>
-	<field name="password" class="java.lang.String"/>
+	<field name="player_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="player_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="player_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="players"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="players"/>
+	</field>
+	<field name="surnames" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="surnames"/>
+		<property name="com.jaspersoft.studio.field.label" value="surnames"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="players"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="players"/>
+	</field>
+	<field name="phone" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="phone"/>
+		<property name="com.jaspersoft.studio.field.label" value="phone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="players"/>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dni"/>
+		<property name="com.jaspersoft.studio.field.label" value="dni"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="players"/>
+	</field>
+	<field name="user_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="user_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="user_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="players"/>
+	</field>
+	<field name="password" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="password"/>
+		<property name="com.jaspersoft.studio.field.label" value="password"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="players"/>
+	</field>
 	<title height="55" splitType="Stretch">
-		<staticText>
-			<reportElement x="0" y="12" width="555" height="30"/>
-			<textElement textAlignment="Center" verticalAlignment="Middle">
-				<font size="19" isBold="true"/>
-			</textElement>
-			<text><![CDATA[Lista de Jugadores]]></text>
-		</staticText>
+		<element kind="staticText" uuid="fa1f8fdb-b388-447c-b6c8-63c20af6d2c1" x="80" y="12" width="400" height="30" fontSize="19.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Players]]></text>
+		</element>
 	</title>
 	<columnHeader>
 		<band height="30">
 			<staticText>
-				<reportElement x="0" y="0" width="50" height="30"/>
+				<reportElement x="0" y="0" width="50" height="30" uuid="a1b2c3d4-e5f6-7890-1234-567890abcdef"/>
 				<textElement verticalAlignment="Middle"><font isBold="true"/></textElement>
 				<text><![CDATA[ID]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="50" y="0" width="100" height="30"/>
+				<reportElement x="50" y="0" width="100" height="30" uuid="b2c3d4e5-f6a7-8901-2345-67890abcdef0"/>
 				<textElement verticalAlignment="Middle"><font isBold="true"/></textElement>
 				<text><![CDATA[Nombre]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="150" y="0" width="100" height="30"/>
+				<reportElement x="150" y="0" width="100" height="30" uuid="c3d4e5f6-a7b8-9012-3456-7890abcdef12"/>
 				<textElement verticalAlignment="Middle"><font isBold="true"/></textElement>
 				<text><![CDATA[Apellidos]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="250" y="0" width="100" height="30"/>
+				<reportElement x="250" y="0" width="100" height="30" uuid="d4e5f6a7-b8c9-0123-4567-890abcdef23"/>
 				<textElement verticalAlignment="Middle"><font isBold="true"/></textElement>
 				<text><![CDATA[Email]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="350" y="0" width="80" height="30"/>
+				<reportElement x="350" y="0" width="80" height="30" uuid="e5f6a7b8-c9d0-1234-5678-90abcdef34"/>
 				<textElement verticalAlignment="Middle"><font isBold="true"/></textElement>
 				<text><![CDATA[Teléfono]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="430" y="0" width="125" height="30"/>
+				<reportElement x="430" y="0" width="125" height="30" uuid="f6a7b8c9-d0e1-2345-6789-0abcdef45"/>
 				<textElement verticalAlignment="Middle"><font isBold="true"/></textElement>
 				<text><![CDATA[DNI]]></text>
 			</staticText>
@@ -57,34 +84,40 @@
 	<detail>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="0" width="50" height="20"/>
+				<reportElement x="0" y="0" width="50" height="20" uuid="01234567-89ab-cdef-0123-456789abcdef"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{player_id}]]></textFieldExpression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a1b2c3d4-e5f6-7890-1234-567890abcdef"/>
 			</textField>
 			<textField>
-				<reportElement x="50" y="0" width="100" height="20"/>
+				<reportElement x="50" y="0" width="100" height="20" uuid="12345678-9abcdef0-1234-567890abcdef0"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b2c3d4e5-f6a7-8901-2345-67890abcdef0"/>
 			</textField>
 			<textField>
-				<reportElement x="150" y="0" width="100" height="20"/>
+				<reportElement x="150" y="0" width="100" height="20" uuid="23456789-abcdef01-2345-67890abcdef12"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{surnames}]]></textFieldExpression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c3d4e5f6-a7b8-9012-3456-7890abcdef12"/>
 			</textField>
 			<textField>
-				<reportElement x="250" y="0" width="100" height="20"/>
+				<reportElement x="250" y="0" width="100" height="20" uuid="34567890-bcdef012-3456-7890abcdef23"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d4e5f6a7-b8c9-0123-4567-890abcdef23"/>
 			</textField>
 			<textField>
-				<reportElement x="350" y="0" width="80" height="20"/>
+				<reportElement x="350" y="0" width="80" height="20" uuid="45678901-cdef0123-4567-890abcdef34"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e5f6a7b8-c9d0-1234-5678-90abcdef34"/>
 			</textField>
 			<textField>
-				<reportElement x="430" y="0" width="125" height="20"/>
+				<reportElement x="430" y="0" width="125" height="20" uuid="56789012-def01234-5678-90abcdef45"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f6a7b8c9-d0e1-2345-6789-0abcdef45"/>
 			</textField>
 		</band>
 	</detail>
