@@ -72,7 +72,7 @@
 	</field>
 	<background splitType="Stretch"/>
 	<title height="76" splitType="Stretch">
-		<element kind="staticText" uuid="b3de65ca-6f14-4180-945b-1c38ea458122" mode="Opaque" x="0" y="0" width="555" height="76" backcolor="#40ED9C" fontSize="20.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="b3de65ca-6f14-4180-945b-1c38ea458122" mode="Opaque" x="0" y="0" width="555" height="76" backcolor="#40ED9C" fontName="Times New Roman" fontSize="20.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[LISTADO PLAYERS]]></text>
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
@@ -80,16 +80,16 @@
 		<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 		<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
 	</title>
-	<pageHeader height="56">
-		<element kind="staticText" uuid="e3e325a1-d695-4cb2-97f2-e0754383645b" x="410" y="0" width="78" height="56" fontName="Times New Roman" bold="true" hTextAlign="Right" vTextAlign="Middle">
+	<pageHeader height="64">
+		<element kind="staticText" uuid="81bbbec9-9dd0-4263-b985-8c84900031d9" x="386" y="13" width="100" height="30" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[Fecha:]]></text>
 		</element>
-		<element kind="textField" uuid="e296f822-c983-4385-b9a4-16904553ede7" x="278" y="0" width="277" height="56" fontName="Times New Roman" pattern="dd/MM/yyyy" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="610109e2-0717-47a2-bc5a-b407318044e0" x="470" y="13" width="100" height="30" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[new java.util.Date()]]></expression>
 		</element>
 	</pageHeader>
 	<columnHeader height="61" splitType="Stretch">
-		<element kind="staticText" uuid="4dcacbe7-a3b8-4b90-9aa8-adfb13be9bf0" mode="Opaque" x="0" y="0" width="70" height="61" forecolor="#000000" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="4dcacbe7-a3b8-4b90-9aa8-adfb13be9bf0" mode="Opaque" x="0" y="0" width="70" height="61" forecolor="#000000" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
 			<text><![CDATA[player_id]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="627b1bc0-7e62-4865-85c6-2675ae2c9b1d"/>
@@ -100,7 +100,7 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="4b586603-c33e-4100-8bb5-a9f3f5445141" mode="Opaque" x="70" y="0" width="70" height="61" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" fontSize="10.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="4b586603-c33e-4100-8bb5-a9f3f5445141" mode="Opaque" x="70" y="0" width="70" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
 			<text><![CDATA[name]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d0e5eac8-5cf7-4134-b8ea-4e26b9e65635"/>
@@ -111,7 +111,7 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="248dcb02-6855-4c9a-b7bf-0a944afa0215" mode="Opaque" x="140" y="0" width="70" height="61" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" fontSize="10.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="248dcb02-6855-4c9a-b7bf-0a944afa0215" mode="Opaque" x="140" y="0" width="70" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
 			<text><![CDATA[surnames]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af7fb356-f9ba-4597-80b1-bd4e0464ada1"/>
@@ -122,7 +122,7 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="034eb172-074f-4513-b75b-4ab4fdc146b3" mode="Opaque" x="210" y="0" width="69" height="61" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" fontSize="10.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="034eb172-074f-4513-b75b-4ab4fdc146b3" mode="Opaque" x="210" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
 			<text><![CDATA[email]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ce11cc1e-b2f9-4fe3-9b8e-5e9e25249d3f"/>
@@ -133,7 +133,7 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="057f7c07-3f64-4e51-bf1c-e602195aeaee" mode="Opaque" x="279" y="0" width="69" height="61" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" fontSize="10.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="057f7c07-3f64-4e51-bf1c-e602195aeaee" mode="Opaque" x="279" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
 			<text><![CDATA[phone]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2a5dec26-59b7-4604-aaf0-579c6f88fb53"/>
@@ -144,7 +144,7 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="a4c151f5-e42e-40be-a62d-c071dd35d8fa" mode="Opaque" x="348" y="0" width="69" height="61" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" fontSize="10.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="a4c151f5-e42e-40be-a62d-c071dd35d8fa" mode="Opaque" x="348" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
 			<text><![CDATA[dni]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5d81ba20-bdee-498a-8431-f28e8cf05f39"/>
@@ -155,7 +155,7 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="eb24b0e3-6a55-43fc-baea-6c4ddd451e1a" mode="Opaque" x="417" y="0" width="69" height="61" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" fontSize="10.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="eb24b0e3-6a55-43fc-baea-6c4ddd451e1a" mode="Opaque" x="417" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
 			<text><![CDATA[user_name]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec1c27d4-2e8e-4ae3-b6a8-32894a7f019a"/>
@@ -166,7 +166,7 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="0a5290f9-c786-4074-9574-4e1ca278a105" mode="Opaque" x="486" y="0" width="69" height="61" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" fontSize="10.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="0a5290f9-c786-4074-9574-4e1ca278a105" mode="Opaque" x="486" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
 			<text><![CDATA[password]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="821be21e-24a9-4a2a-8179-da52961b015f"/>
@@ -182,51 +182,54 @@
 	</columnHeader>
 	<detail>
 		<band height="129" splitType="Stretch">
-			<element kind="textField" uuid="0b1177a3-196f-40ef-afdf-927804e5c028" x="0" y="0" width="70" height="129" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="0b1177a3-196f-40ef-afdf-927804e5c028" x="0" y="0" width="70" height="129" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{player_id}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="627b1bc0-7e62-4865-85c6-2675ae2c9b1d"/>
 			</element>
-			<element kind="textField" uuid="fc91ada0-ebcb-4429-8f17-f5c925bbf9ac" x="70" y="0" width="70" height="129" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="fc91ada0-ebcb-4429-8f17-f5c925bbf9ac" x="70" y="0" width="70" height="129" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{name}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d0e5eac8-5cf7-4134-b8ea-4e26b9e65635"/>
 			</element>
-			<element kind="textField" uuid="d84a7746-b08a-4ab0-bd0f-07e88d9b7533" x="140" y="0" width="70" height="129" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="d84a7746-b08a-4ab0-bd0f-07e88d9b7533" x="140" y="0" width="70" height="129" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{surnames}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af7fb356-f9ba-4597-80b1-bd4e0464ada1"/>
 			</element>
-			<element kind="textField" uuid="e3c40a0a-2a6a-4540-b9e1-49de3dd6fc0a" x="210" y="0" width="69" height="129" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="e3c40a0a-2a6a-4540-b9e1-49de3dd6fc0a" x="210" y="0" width="69" height="129" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{email}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ce11cc1e-b2f9-4fe3-9b8e-5e9e25249d3f"/>
 			</element>
-			<element kind="textField" uuid="050d2f25-6104-483f-ab36-bfe5cbc924f4" x="279" y="0" width="69" height="129" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="050d2f25-6104-483f-ab36-bfe5cbc924f4" x="279" y="0" width="69" height="129" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{phone}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2a5dec26-59b7-4604-aaf0-579c6f88fb53"/>
 			</element>
-			<element kind="textField" uuid="7fc9ceba-4536-4a0b-b915-fba45a79e2a4" x="348" y="0" width="69" height="129" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="7fc9ceba-4536-4a0b-b915-fba45a79e2a4" x="348" y="0" width="69" height="129" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{dni}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5d81ba20-bdee-498a-8431-f28e8cf05f39"/>
 			</element>
-			<element kind="textField" uuid="9990099f-1f62-40e2-8b59-29a41e086608" x="417" y="0" width="69" height="129" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="9990099f-1f62-40e2-8b59-29a41e086608" x="417" y="0" width="69" height="129" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{user_name}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec1c27d4-2e8e-4ae3-b6a8-32894a7f019a"/>
 			</element>
-			<element kind="textField" uuid="6971ea49-2968-4a15-ac6f-04de2e2c5110" x="486" y="0" width="69" height="129" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="6971ea49-2968-4a15-ac6f-04de2e2c5110" x="486" y="0" width="69" height="129" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{password}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="821be21e-24a9-4a2a-8179-da52961b015f"/>
 			</element>
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
 		</band>
 	</detail>
-	<pageFooter height="68">
-		<element kind="textField" uuid="b7514b12-5c99-4b1d-b878-754f5b868b43" x="526" y="38" width="100" height="30">
+	<pageFooter height="80">
+		<element kind="textField" uuid="b7514b12-5c99-4b1d-b878-754f5b868b43" x="526" y="38" width="100" height="30" fontName="Times New Roman">
 			<expression><![CDATA[$V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="staticText" uuid="713b9738-c010-48cf-b87e-1f516dae49d7" x="480" y="38" width="100" height="30" fontName="Times New Roman">
+			<text><![CDATA[Página:]]></text>
 		</element>
 	</pageFooter>
 	<summary height="91">
-		<element kind="textField" uuid="7f394ef9-42ac-4373-aba6-5750ba54c2f2" x="190" y="0" width="265" height="91" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="textField" uuid="7f394ef9-42ac-4373-aba6-5750ba54c2f2" x="190" y="0" width="265" height="91" fontName="Times New Roman" hTextAlign="Left" vTextAlign="Middle">
 			<expression><![CDATA[$V{REPORT_COUNT}]]></expression>
 		</element>
-		<element kind="staticText" uuid="8b63872e-17a1-4595-9f99-7c0dab1bd529" x="30" y="0" width="278" height="91" fontName="SansSerif&#xd;&#xa;&#xd;&#xa;Times New Roman" bold="true" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="staticText" uuid="8b63872e-17a1-4595-9f99-7c0dab1bd529" x="30" y="0" width="120" height="91" fontName="Times New Roman" bold="true" hTextAlign="Left" vTextAlign="Middle">
 			<text><![CDATA[TOTAL JUGADORES:]]></text>
 		</element>
 	</summary>

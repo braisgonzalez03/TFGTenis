@@ -11,7 +11,7 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
-import reportsService.ReportService;
+import reports.ReportService;
 
 /**
  *
@@ -19,7 +19,8 @@ import reportsService.ReportService;
  */
 public class MainJasper extends javax.swing.JFrame {
 
-    private static final String REPORT_PATH = "/reports/players.jrxml";
+    private static final String REPORT_PATH_PLAYERS = "/reports/players.jrxml";
+    private static final String REPORT_PATH_INSCRIPTIONS = "/reports/inscriptions.jrxml";
 
     private final ReportService reportService;
 
@@ -62,67 +63,150 @@ public class MainJasper extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnView = new javax.swing.JButton();
-        btnSave = new javax.swing.JButton();
-        btnViewAndSave = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        btnSavePlayers = new javax.swing.JButton();
+        btnViewPlayers = new javax.swing.JButton();
+        btnViewAndSavePlayers = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        btnViewInscriptions = new javax.swing.JButton();
+        btnSaveInscriptions = new javax.swing.JButton();
+        btnViewAndSaveInscriptions = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridLayout());
 
-        btnView.setText("View Report");
-        btnView.addActionListener(new java.awt.event.ActionListener() {
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Players"));
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        btnSavePlayers.setText("Save Pdf");
+        btnSavePlayers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
+                btnSavePlayersActionPerformed(evt);
             }
         });
-        getContentPane().add(btnView);
+        jPanel1.add(btnSavePlayers, java.awt.BorderLayout.CENTER);
 
-        btnSave.setText("Save Pdf");
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
+        btnViewPlayers.setText("View Report");
+        btnViewPlayers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
+                btnViewPlayersActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSave);
+        jPanel1.add(btnViewPlayers, java.awt.BorderLayout.PAGE_START);
 
-        btnViewAndSave.setText("View and Save");
-        btnViewAndSave.addActionListener(new java.awt.event.ActionListener() {
+        btnViewAndSavePlayers.setText("View and Save");
+        btnViewAndSavePlayers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewAndSaveActionPerformed(evt);
+                btnViewAndSavePlayersActionPerformed(evt);
             }
         });
-        getContentPane().add(btnViewAndSave);
+        jPanel1.add(btnViewAndSavePlayers, java.awt.BorderLayout.PAGE_END);
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Inscriptions"));
+        jPanel2.setToolTipText("");
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        btnViewInscriptions.setText("View Report");
+        btnViewInscriptions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewInscriptionsActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnViewInscriptions, java.awt.BorderLayout.PAGE_START);
+
+        btnSaveInscriptions.setText("Save Pdf");
+        btnSaveInscriptions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveInscriptionsActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnSaveInscriptions, java.awt.BorderLayout.CENTER);
+
+        btnViewAndSaveInscriptions.setText("View and Save");
+        btnViewAndSaveInscriptions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewAndSaveInscriptionsActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnViewAndSaveInscriptions, java.awt.BorderLayout.PAGE_END);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(227, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+    private void btnViewPlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPlayersActionPerformed
         try {
-            reportService.get(REPORT_PATH).view();
+            reportService.get(REPORT_PATH_PLAYERS).view();
         } catch (Exception ex) {
             Logger.getLogger(MainJasper.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_btnViewActionPerformed
+    }//GEN-LAST:event_btnViewPlayersActionPerformed
 
-    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+    private void btnSavePlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavePlayersActionPerformed
         SavePdfChooser chooser = new SavePdfChooser(this);
         String dest = chooser.getFilePath();
         try {
-            reportService.get(REPORT_PATH).toPdf(dest, true);
+            reportService.get(REPORT_PATH_PLAYERS).toPdf(dest, true);
         } catch (Exception ex) {
             Logger.getLogger(MainJasper.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_btnSaveActionPerformed
+    }//GEN-LAST:event_btnSavePlayersActionPerformed
 
-    private void btnViewAndSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAndSaveActionPerformed
+    private void btnViewAndSavePlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAndSavePlayersActionPerformed
         SavePdfChooser chooser = new SavePdfChooser(this);
         String dest = chooser.getFilePath();
         try {
-            reportService.get(REPORT_PATH).view().toPdf(dest, false);
+            reportService.get(REPORT_PATH_PLAYERS).view().toPdf(dest, false);
         } catch (Exception ex) {
             Logger.getLogger(MainJasper.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_btnViewAndSaveActionPerformed
+    }//GEN-LAST:event_btnViewAndSavePlayersActionPerformed
+
+    private void btnViewInscriptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewInscriptionsActionPerformed
+        try {
+            reportService.get(REPORT_PATH_INSCRIPTIONS).view();
+        } catch (Exception ex) {
+            Logger.getLogger(MainJasper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnViewInscriptionsActionPerformed
+
+    private void btnSaveInscriptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveInscriptionsActionPerformed
+        SavePdfChooser chooser = new SavePdfChooser(this);
+        String dest = chooser.getFilePath();
+        try {
+            reportService.get(REPORT_PATH_INSCRIPTIONS).toPdf(dest, true);
+        } catch (Exception ex) {
+            Logger.getLogger(MainJasper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnSaveInscriptionsActionPerformed
+
+    private void btnViewAndSaveInscriptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAndSaveInscriptionsActionPerformed
+        SavePdfChooser chooser = new SavePdfChooser(this);
+        String dest = chooser.getFilePath();
+        try {
+            reportService.get(REPORT_PATH_INSCRIPTIONS).view().toPdf(dest, false);
+        } catch (Exception ex) {
+            Logger.getLogger(MainJasper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnViewAndSaveInscriptionsActionPerformed
 
  public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -152,10 +236,16 @@ public class MainJasper extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> {
             new MainJasper().setVisible(true);
         });
+        
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSave;
-    private javax.swing.JButton btnView;
-    private javax.swing.JButton btnViewAndSave;
+    private javax.swing.JButton btnSaveInscriptions;
+    private javax.swing.JButton btnSavePlayers;
+    private javax.swing.JButton btnViewAndSaveInscriptions;
+    private javax.swing.JButton btnViewAndSavePlayers;
+    private javax.swing.JButton btnViewInscriptions;
+    private javax.swing.JButton btnViewPlayers;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

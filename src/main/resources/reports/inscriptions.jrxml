@@ -36,38 +36,38 @@
 	</group>
 	<background splitType="Stretch"/>
 	<title height="79" splitType="Stretch">
-		<element kind="staticText" uuid="e7643e44-5163-4081-b539-973f2106e905" mode="Opaque" x="0" y="0" width="555" height="79" backcolor="#40ED9C" fontName="&#xd;&#xa;SansSerif" fontSize="20.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[LISTADO INSCRIPTIONS]]></text>
+		<element kind="staticText" uuid="e8e3c1a3-3ef1-40d6-b97e-ad1b25d5ff5f" mode="Opaque" x="0" y="0" width="555" height="79" backcolor="#40ED9C" fontName="Times New Roman" fontSize="20.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[LISTADO INSCRIPCIONES]]></text>
 		</element>
 		<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
 	</title>
-	<pageHeader height="56">
-		<element kind="staticText" uuid="7fa81b02-ed19-4ba2-afea-9ba9fcd04f05" x="410" y="0" width="78" height="56" fontName="Times New Roman" bold="true" hTextAlign="Right" vTextAlign="Middle">
+	<pageHeader height="59">
+		<element kind="staticText" uuid="1536357a-9644-418a-b2fd-a706e3a4dff3" x="390" y="14" width="100" height="30" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[Fecha:]]></text>
 		</element>
-		<element kind="textField" uuid="4e58a105-2416-4249-a265-e8720abf22f6" x="278" y="0" width="277" height="56" fontName="Times New Roman" pattern="dd/MM/yyyy" hTextAlign="Right" vTextAlign="Middle">
+		<element kind="textField" uuid="05604178-ec82-40c5-9f8d-530d974ead56" x="470" y="14" width="100" height="30" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[new java.util.Date()]]></expression>
 		</element>
 		<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 	</pageHeader>
 	<columnHeader height="61" splitType="Stretch">
-		<element kind="staticText" uuid="f6e8645e-5620-4fd7-8333-1ca420930f25" mode="Opaque" x="0" y="0" width="111" height="61" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="f6e8645e-5620-4fd7-8333-1ca420930f25" mode="Opaque" x="0" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[inscription_id]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="38795faf-d790-40aa-a6eb-31cc544504be"/>
 		</element>
-		<element kind="staticText" uuid="63798828-b099-46b4-ac6c-1458b17c14a1" mode="Opaque" x="111" y="0" width="111" height="61" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="63798828-b099-46b4-ac6c-1458b17c14a1" mode="Opaque" x="111" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[players_id]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f44bdd78-1ba9-4fa8-afb8-d01f7aaac0bd"/>
 		</element>
-		<element kind="staticText" uuid="c10d1aa2-5bfc-4a08-8e6c-8809021431dd" mode="Opaque" x="222" y="0" width="111" height="61" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="c10d1aa2-5bfc-4a08-8e6c-8809021431dd" mode="Opaque" x="222" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[tournaments_id]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0ca3f62c-e9cb-4daf-9457-cb65b042dccc"/>
 		</element>
-		<element kind="staticText" uuid="118747e7-0f34-47c9-a446-b245405a798d" mode="Opaque" x="333" y="0" width="111" height="61" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="118747e7-0f34-47c9-a446-b245405a798d" mode="Opaque" x="333" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[start_date]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3db60f9c-4751-4b0e-ba74-6c1d6bcddde1"/>
 		</element>
-		<element kind="staticText" uuid="1703d0fc-ccde-4e52-8243-3a8e4ebad98d" mode="Opaque" x="444" y="0" width="111" height="61" backcolor="#37C3FA" fontName="&#xd;&#xa;SansSerif" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="1703d0fc-ccde-4e52-8243-3a8e4ebad98d" mode="Opaque" x="444" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[end_date]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8be9722c-fad5-4217-856a-a75e1866e737"/>
 		</element>
@@ -75,43 +75,43 @@
 	</columnHeader>
 	<detail>
 		<band height="93" splitType="Stretch">
-			<element kind="textField" uuid="e52b5af5-6005-43fd-80c2-a674771a3e3a" x="0" y="0" width="111" height="93" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="e52b5af5-6005-43fd-80c2-a674771a3e3a" x="0" y="0" width="111" height="93" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{inscription_id}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="38795faf-d790-40aa-a6eb-31cc544504be"/>
 			</element>
-			<element kind="textField" uuid="18f561c6-6165-4abd-ada7-fbaeb38a0707" x="111" y="0" width="111" height="93" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="18f561c6-6165-4abd-ada7-fbaeb38a0707" x="111" y="0" width="111" height="93" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{players_id}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f44bdd78-1ba9-4fa8-afb8-d01f7aaac0bd"/>
 			</element>
-			<element kind="textField" uuid="4964fa8b-bc57-4fbc-8a4f-6d6b04c4ab5f" x="222" y="0" width="111" height="93" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="4964fa8b-bc57-4fbc-8a4f-6d6b04c4ab5f" x="222" y="0" width="111" height="93" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{tournaments_id}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0ca3f62c-e9cb-4daf-9457-cb65b042dccc"/>
 			</element>
-			<element kind="textField" uuid="e0c0fc8b-e207-4a28-83db-de3445a37ca1" x="333" y="0" width="111" height="93" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="e0c0fc8b-e207-4a28-83db-de3445a37ca1" x="333" y="0" width="111" height="93" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{start_date}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3db60f9c-4751-4b0e-ba74-6c1d6bcddde1"/>
 			</element>
-			<element kind="textField" uuid="d3851ec5-3bc6-4ff6-ac43-6dd7d23ff3a2" x="444" y="0" width="111" height="93" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="d3851ec5-3bc6-4ff6-ac43-6dd7d23ff3a2" x="444" y="0" width="111" height="93" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{end_date}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8be9722c-fad5-4217-856a-a75e1866e737"/>
 			</element>
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
 		</band>
 	</detail>
-	<pageFooter height="84" splitType="Stretch">
-		<element kind="staticText" uuid="b60e2a95-3fe5-4ae7-9fa2-33e2e8ce1396" x="475" y="50" width="100" height="30">
+	<pageFooter height="92" splitType="Stretch">
+		<element kind="staticText" uuid="87f79499-ea34-4727-8fc4-14cff627cc5d" x="475" y="50" width="100" height="30" fontName="Times New Roman" hTextAlign="Left" vTextAlign="Top">
 			<text><![CDATA[Página:]]></text>
 		</element>
-		<element kind="textField" uuid="a13ecba7-7785-4cb2-9afc-867428a1149a" x="520" y="50" width="100" height="30">
+		<element kind="textField" uuid="48419ef4-30ac-4870-9ccf-9fc4f972b96b" x="530" y="50" width="100" height="30" fontName="Times New Roman" hTextAlign="Left" vTextAlign="Top">
 			<expression><![CDATA[$V{PAGE_NUMBER}]]></expression>
 		</element>
 	</pageFooter>
 	<summary height="91" splitType="Stretch">
-		<element kind="staticText" uuid="5962b44c-75b7-411c-aca6-c42a95a4fae5" x="30" y="0" width="278" height="91" fontName="&#xd;&#xa;SansSerif" strikeThrough="false" bold="true" hTextAlign="Left" vTextAlign="Middle">
-			<text><![CDATA[TOTAL INSCRIPCIONES:]]></text>
-		</element>
-		<element kind="textField" uuid="a4ba2a8d-4725-4183-8bdc-02a6a37429bf" x="190" y="0" width="265" height="91" hTextAlign="Left" vTextAlign="Middle">
+		<element kind="textField" uuid="93f1e688-89a6-4341-b09b-25ab3e4a132a" x="116" y="30" width="100" height="30" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 			<expression><![CDATA[$V{REPORT_COUNT}]]></expression>
+		</element>
+		<element kind="staticText" uuid="092b568d-6769-4fa6-a42f-63d67cc9a4de" x="20" y="30" width="142" height="30" fontName="Times New Roman" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[TOTAL INSCRIPCIONES:]]></text>
 		</element>
 		<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 	</summary>
