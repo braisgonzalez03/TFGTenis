@@ -89,9 +89,9 @@
 		</element>
 	</pageHeader>
 	<columnHeader height="61" splitType="Stretch">
-		<element kind="staticText" uuid="4dcacbe7-a3b8-4b90-9aa8-adfb13be9bf0" mode="Opaque" x="0" y="0" width="70" height="61" forecolor="#000000" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="4dcacbe7-a3b8-4b90-9aa8-adfb13be9bf0" mode="Opaque" x="0" y="0" width="70" height="61" forecolor="#000000" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
-			<text><![CDATA[player_id]]></text>
+			<text><![CDATA[Player_id]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="627b1bc0-7e62-4865-85c6-2675ae2c9b1d"/>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -100,9 +100,9 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="4b586603-c33e-4100-8bb5-a9f3f5445141" mode="Opaque" x="70" y="0" width="70" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="4b586603-c33e-4100-8bb5-a9f3f5445141" mode="Opaque" x="70" y="0" width="70" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
-			<text><![CDATA[name]]></text>
+			<text><![CDATA[Name]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d0e5eac8-5cf7-4134-b8ea-4e26b9e65635"/>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -111,9 +111,9 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="248dcb02-6855-4c9a-b7bf-0a944afa0215" mode="Opaque" x="140" y="0" width="70" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="248dcb02-6855-4c9a-b7bf-0a944afa0215" mode="Opaque" x="140" y="0" width="70" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
-			<text><![CDATA[surnames]]></text>
+			<text><![CDATA[Surnames]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af7fb356-f9ba-4597-80b1-bd4e0464ada1"/>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -122,9 +122,9 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="034eb172-074f-4513-b75b-4ab4fdc146b3" mode="Opaque" x="210" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="034eb172-074f-4513-b75b-4ab4fdc146b3" mode="Opaque" x="210" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
-			<text><![CDATA[email]]></text>
+			<text><![CDATA[Email]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ce11cc1e-b2f9-4fe3-9b8e-5e9e25249d3f"/>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -133,9 +133,9 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="057f7c07-3f64-4e51-bf1c-e602195aeaee" mode="Opaque" x="279" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="057f7c07-3f64-4e51-bf1c-e602195aeaee" mode="Opaque" x="279" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
-			<text><![CDATA[phone]]></text>
+			<text><![CDATA[Phone]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2a5dec26-59b7-4604-aaf0-579c6f88fb53"/>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -144,9 +144,9 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="a4c151f5-e42e-40be-a62d-c071dd35d8fa" mode="Opaque" x="348" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="a4c151f5-e42e-40be-a62d-c071dd35d8fa" mode="Opaque" x="348" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
-			<text><![CDATA[dni]]></text>
+			<text><![CDATA[Dni]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5d81ba20-bdee-498a-8431-f28e8cf05f39"/>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -155,9 +155,9 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="eb24b0e3-6a55-43fc-baea-6c4ddd451e1a" mode="Opaque" x="417" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="eb24b0e3-6a55-43fc-baea-6c4ddd451e1a" mode="Opaque" x="417" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
-			<text><![CDATA[user_name]]></text>
+			<text><![CDATA[User_name]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec1c27d4-2e8e-4ae3-b6a8-32894a7f019a"/>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -166,9 +166,9 @@
 				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="0a5290f9-c786-4074-9574-4e1ca278a105" mode="Opaque" x="486" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="10.0" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="0a5290f9-c786-4074-9574-4e1ca278a105" mode="Opaque" x="486" y="0" width="69" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<paragraph lineSpacing="Single"/>
-			<text><![CDATA[password]]></text>
+			<text><![CDATA[Password]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="821be21e-24a9-4a2a-8179-da52961b015f"/>
 			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
 				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>

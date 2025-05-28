@@ -51,24 +51,24 @@
 		<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 	</pageHeader>
 	<columnHeader height="61" splitType="Stretch">
-		<element kind="staticText" uuid="f6e8645e-5620-4fd7-8333-1ca420930f25" mode="Opaque" x="0" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[inscription_id]]></text>
+		<element kind="staticText" uuid="f6e8645e-5620-4fd7-8333-1ca420930f25" mode="Opaque" x="0" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Inscription_id]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="38795faf-d790-40aa-a6eb-31cc544504be"/>
 		</element>
-		<element kind="staticText" uuid="63798828-b099-46b4-ac6c-1458b17c14a1" mode="Opaque" x="111" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[players_id]]></text>
+		<element kind="staticText" uuid="63798828-b099-46b4-ac6c-1458b17c14a1" mode="Opaque" x="111" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Players_id]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f44bdd78-1ba9-4fa8-afb8-d01f7aaac0bd"/>
 		</element>
-		<element kind="staticText" uuid="c10d1aa2-5bfc-4a08-8e6c-8809021431dd" mode="Opaque" x="222" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[tournaments_id]]></text>
+		<element kind="staticText" uuid="c10d1aa2-5bfc-4a08-8e6c-8809021431dd" mode="Opaque" x="222" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Tournaments_id]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0ca3f62c-e9cb-4daf-9457-cb65b042dccc"/>
 		</element>
-		<element kind="staticText" uuid="118747e7-0f34-47c9-a446-b245405a798d" mode="Opaque" x="333" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[start_date]]></text>
+		<element kind="staticText" uuid="118747e7-0f34-47c9-a446-b245405a798d" mode="Opaque" x="333" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Start_date]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3db60f9c-4751-4b0e-ba74-6c1d6bcddde1"/>
 		</element>
-		<element kind="staticText" uuid="1703d0fc-ccde-4e52-8243-3a8e4ebad98d" mode="Opaque" x="444" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" bold="true" underline="true" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[end_date]]></text>
+		<element kind="staticText" uuid="1703d0fc-ccde-4e52-8243-3a8e4ebad98d" mode="Opaque" x="444" y="0" width="111" height="61" backcolor="#37C3FA" fontName="Times New Roman" fontSize="11.0" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[End_date]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8be9722c-fad5-4217-856a-a75e1866e737"/>
 		</element>
 		<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>

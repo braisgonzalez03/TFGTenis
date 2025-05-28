@@ -1,0 +1,112 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="TorneosPorTenista" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a48b96d6-9469-4fac-a0ad-c28635dd16ed">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Clubtenis"/>
+	<parameter name="TorneoClasificacionParametro" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[SELECT p.name, p. surnames, t.name AS name_tournament, t.classification FROM
+players p INNER JOIN inscriptions i ON p.player_id=i.players_id
+INNER JOIN tournaments t ON i.tournaments_id=t.tournament_id
+WHERE t.classification =  $P{TorneoClasificacionParametro}]]></query>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="players"/>
+	</field>
+	<field name="surnames" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="surnames"/>
+		<property name="com.jaspersoft.studio.field.label" value="surnames"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="players"/>
+	</field>
+	<field name="name_tournament" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name_tournament"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tournaments"/>
+	</field>
+	<field name="classification" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="classification"/>
+		<property name="com.jaspersoft.studio.field.label" value="classification"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tournaments"/>
+	</field>
+	<group name="name">
+		<expression><![CDATA[$F{name}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="68359fc1-00cb-4177-9f3d-4e3fd8d22b87" mode="Opaque" x="0" y="0" width="555" height="79" backcolor="#40ED9C" fontName="Times New Roman" fontSize="20.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[LISTADO JUGADORES/TORNEOS POR CLASIFICACIÓN]]></text>
+		</element>
+		<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+	</title>
+	<pageHeader height="50" splitType="Stretch">
+		<element kind="textField" uuid="246b4fb1-cc67-47d1-8318-129f2b84fdba" x="445" y="10" width="100" height="30" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[new java.util.Date();]]></expression>
+		</element>
+		<element kind="staticText" uuid="879a0a8a-a9c1-4621-a91a-eaa4d8900fc7" x="390" y="10" width="100" height="30" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Fecha:]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="ed623888-4da7-4c2f-b615-5e41ba143795" mode="Opaque" x="0" y="0" width="139" height="61" backcolor="#37C3FA" fontName="Times New Roman" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Name]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="01379d9a-ca78-47ff-af81-1e839d8e2a1e"/>
+		</element>
+		<element kind="staticText" uuid="255cf63d-0e71-4428-b112-0094aba9883e" mode="Opaque" x="139" y="0" width="139" height="61" backcolor="#37C3FA" fontName="Times New Roman" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Surnames]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9b29062f-d13c-4f43-85a7-5cc7db8457a2"/>
+		</element>
+		<element kind="staticText" uuid="8cad9939-6df0-4174-b5d5-d94f135fb730" mode="Opaque" x="278" y="0" width="139" height="61" backcolor="#37C3FA" fontName="Times New Roman" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Name_tournament]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="176bc3f4-17ee-4142-adbc-e3e71177c6bc"/>
+		</element>
+		<element kind="staticText" uuid="e2855a9a-1822-43e1-b7bf-016370f55d35" mode="Opaque" x="417" y="0" width="138" height="61" backcolor="#37C3FA" fontName="Times New Roman" underline="true" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Classification]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="42c68b8c-6d90-4c8b-be68-e55a6cdaedb2"/>
+		</element>
+		<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+	</columnHeader>
+	<detail>
+		<band height="62" splitType="Stretch">
+			<element kind="textField" uuid="8136dfbb-6763-4f46-8ba5-e30d4d0b4347" x="0" y="0" width="139" height="62" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="01379d9a-ca78-47ff-af81-1e839d8e2a1e"/>
+			</element>
+			<element kind="textField" uuid="189d8dbb-c5b0-4592-a1bf-b70b0d11828d" x="139" y="0" width="139" height="62" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{surnames}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9b29062f-d13c-4f43-85a7-5cc7db8457a2"/>
+			</element>
+			<element kind="textField" uuid="2fa7d151-bba5-4fdc-9454-e5e25a0ecb0f" x="278" y="0" width="139" height="62" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{name_tournament}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="176bc3f4-17ee-4142-adbc-e3e71177c6bc"/>
+			</element>
+			<element kind="textField" uuid="ad35f206-bcac-4082-b6d0-667ea6919870" x="417" y="0" width="138" height="62" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{classification}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="42c68b8c-6d90-4c8b-be68-e55a6cdaedb2"/>
+			</element>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+		</band>
+	</detail>
+	<columnFooter height="290" splitType="Stretch">
+		<element kind="chart" chartType="bar" uuid="690ce65c-5d0e-4c2f-8764-6010c7b581c8" x="0" y="0" width="555" height="290" evaluationTime="Report">
+			<titleFont fontName="Times New Roman"/>
+			<dataset kind="category">
+				<series>
+					<seriesExpression><![CDATA[$F{surnames}]]></seriesExpression>
+					<categoryExpression><![CDATA[$F{name_tournament}]]></categoryExpression>
+					<valueExpression><![CDATA[new Integer(1)]]></valueExpression>
+				</series>
+			</dataset>
+			<plot categoryAxisLabelColor="#000000" categoryAxisTickLabelColor="#000000" categoryAxisLineColor="#000000" valueAxisLabelColor="#000000" valueAxisTickLabelColor="#000000" valueAxisLineColor="#000000">
+				<itemLabel/>
+			</plot>
+		</element>
+		<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+	</columnFooter>
+	<pageFooter height="85" splitType="Stretch">
+		<element kind="staticText" uuid="c91ad82c-1fcc-4638-9d39-085f4bc61e8e" x="450" y="30" width="100" height="30" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Página:]]></text>
+		</element>
+		<element kind="textField" uuid="18997c0e-5ae1-473b-8f92-bdd378449850" x="480" y="30" width="100" height="30" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$V{PAGE_NUMBER}]]></expression>
+		</element>
+	</pageFooter>
+</jasperReport>

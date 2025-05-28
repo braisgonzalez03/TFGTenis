@@ -7,6 +7,10 @@ package vista;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.io.IOException;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,6 +25,8 @@ public class MainJasper extends javax.swing.JFrame {
 
     private static final String REPORT_PATH_PLAYERS = "/reports/players.jrxml";
     private static final String REPORT_PATH_INSCRIPTIONS = "/reports/inscriptions.jrxml";
+    private static final String REPORT_PATH_TOURNAMENTS_BY_PLAYERS = "/reports/TorneosPorTenista.jrxml";
+    private static final String REPORT_PATH_INSCRIPTIONS_BY_DATE = "/reports/InscripcionesPorFecha.jrxml";
 
     private final ReportService reportService;
 
@@ -41,9 +47,9 @@ public class MainJasper extends javax.swing.JFrame {
         }
 
         reportService = new ReportService(
-        prop.getProperty("dburl"),
-        prop.getProperty("dbuser"),
-        prop.getProperty("dbpassword"));
+                prop.getProperty("dburl"),
+                prop.getProperty("dbuser"),
+                prop.getProperty("dbpassword"));
 
         try {
             Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/pelota.png"));
@@ -71,6 +77,14 @@ public class MainJasper extends javax.swing.JFrame {
         btnViewInscriptions = new javax.swing.JButton();
         btnSaveInscriptions = new javax.swing.JButton();
         btnViewAndSaveInscriptions = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        btnSaveTorneosPorTenistas = new javax.swing.JButton();
+        btnViewTorneosPorTenistas = new javax.swing.JButton();
+        btnViewAndSaveTorneosPorTenistas = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        btnSaveInscripcionesPorFecha = new javax.swing.JButton();
+        btnViewInscripcionesPorFecha = new javax.swing.JButton();
+        btnViewAndSaveInscripcionesPorFecha = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -129,23 +143,88 @@ public class MainJasper extends javax.swing.JFrame {
         });
         jPanel2.add(btnViewAndSaveInscriptions, java.awt.BorderLayout.PAGE_END);
 
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Torneos Por Tenistas"));
+        jPanel3.setLayout(new java.awt.BorderLayout());
+
+        btnSaveTorneosPorTenistas.setText("Save Pdf");
+        btnSaveTorneosPorTenistas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveTorneosPorTenistasActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnSaveTorneosPorTenistas, java.awt.BorderLayout.CENTER);
+
+        btnViewTorneosPorTenistas.setText("View Report");
+        btnViewTorneosPorTenistas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewTorneosPorTenistasActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnViewTorneosPorTenistas, java.awt.BorderLayout.PAGE_START);
+
+        btnViewAndSaveTorneosPorTenistas.setText("View and Save");
+        btnViewAndSaveTorneosPorTenistas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewAndSaveTorneosPorTenistasActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnViewAndSaveTorneosPorTenistas, java.awt.BorderLayout.PAGE_END);
+
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Inscripciones Por Fecha"));
+        jPanel4.setLayout(new java.awt.BorderLayout());
+
+        btnSaveInscripcionesPorFecha.setText("Save Pdf");
+        btnSaveInscripcionesPorFecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveInscripcionesPorFechaActionPerformed(evt);
+            }
+        });
+        jPanel4.add(btnSaveInscripcionesPorFecha, java.awt.BorderLayout.CENTER);
+
+        btnViewInscripcionesPorFecha.setText("View Report");
+        btnViewInscripcionesPorFecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewInscripcionesPorFechaActionPerformed(evt);
+            }
+        });
+        jPanel4.add(btnViewInscripcionesPorFecha, java.awt.BorderLayout.PAGE_START);
+
+        btnViewAndSaveInscripcionesPorFecha.setText("View and Save");
+        btnViewAndSaveInscripcionesPorFecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewAndSaveInscripcionesPorFechaActionPerformed(evt);
+            }
+        });
+        jPanel4.add(btnViewAndSaveInscripcionesPorFecha, java.awt.BorderLayout.PAGE_END);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -208,44 +287,114 @@ public class MainJasper extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnViewAndSaveInscriptionsActionPerformed
 
- public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+    private void btnViewTorneosPorTenistasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewTorneosPorTenistasActionPerformed
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainJasper.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainJasper.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainJasper.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainJasper.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Map<String, Object> parameters = new HashMap<>();
+            String clasificacionDeseada = "Amateur";
+            parameters.put("TorneoClasificacionParametro", clasificacionDeseada);
+            reportService.get(REPORT_PATH_TOURNAMENTS_BY_PLAYERS, parameters).view();
+        } catch (Exception ex) {
+            Logger.getLogger(MainJasper.class.getName()).log(Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+    }//GEN-LAST:event_btnViewTorneosPorTenistasActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            new MainJasper().setVisible(true);
-        });
-        
-    }
+    private void btnSaveTorneosPorTenistasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveTorneosPorTenistasActionPerformed
+        SavePdfChooser chooser = new SavePdfChooser(this);
+        String dest = chooser.getFilePath();
+        try {
+            Map<String, Object> parameters = new HashMap<>();
+            String clasificacionDeseada = "Amateur";
+            parameters.put("TorneoClasificacionParametro", clasificacionDeseada);
+            reportService.get(REPORT_PATH_TOURNAMENTS_BY_PLAYERS, parameters).toPdf(dest, true);
+        } catch (Exception ex) {
+            Logger.getLogger(MainJasper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnSaveTorneosPorTenistasActionPerformed
+
+    private void btnViewAndSaveTorneosPorTenistasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAndSaveTorneosPorTenistasActionPerformed
+        SavePdfChooser chooser = new SavePdfChooser(this);
+        String dest = chooser.getFilePath();
+        try {
+            Map<String, Object> parameters = new HashMap<>();
+            String clasificacionDeseada = "Amateur";
+            parameters.put("TorneoClasificacionParametro", clasificacionDeseada);
+            reportService.get(REPORT_PATH_TOURNAMENTS_BY_PLAYERS, parameters).view().toPdf(dest, false);
+        } catch (Exception ex) {
+            Logger.getLogger(MainJasper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnViewAndSaveTorneosPorTenistasActionPerformed
+
+    private void btnViewInscripcionesPorFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewInscripcionesPorFechaActionPerformed
+        try {
+            Map<String, Object> parameters = new HashMap<>();
+            LocalDate localFechaInicio = LocalDate.of(2025, 5, 1);
+            LocalDate localFechaFin = LocalDate.of(2025, 5, 31);
+            
+            Date fechaInicio = Date.valueOf(localFechaInicio);
+            Date fechaFin = Date.valueOf(localFechaFin);
+
+            parameters.put("FechaInicio", fechaInicio);
+            parameters.put("FechaFin", fechaFin);
+            reportService.get(REPORT_PATH_INSCRIPTIONS_BY_DATE,parameters).view();
+        } catch (Exception ex) {
+            Logger.getLogger(MainJasper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnViewInscripcionesPorFechaActionPerformed
+
+    private void btnSaveInscripcionesPorFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveInscripcionesPorFechaActionPerformed
+        SavePdfChooser chooser = new SavePdfChooser(this);
+        String dest = chooser.getFilePath();
+        try {
+            Map<String, Object> parameters = new HashMap<>();
+            LocalDate localFechaInicio = LocalDate.of(2025, 5, 1);
+            LocalDate localFechaFin = LocalDate.of(2025, 5, 31);
+            
+            Date fechaInicio = Date.valueOf(localFechaInicio);
+            Date fechaFin = Date.valueOf(localFechaFin);
+
+            parameters.put("FechaInicio", fechaInicio);
+            parameters.put("FechaFin", fechaFin);
+            reportService.get(REPORT_PATH_INSCRIPTIONS_BY_DATE,parameters).toPdf(dest, true);
+        } catch (Exception ex) {
+            Logger.getLogger(MainJasper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnSaveInscripcionesPorFechaActionPerformed
+
+    private void btnViewAndSaveInscripcionesPorFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAndSaveInscripcionesPorFechaActionPerformed
+        SavePdfChooser chooser = new SavePdfChooser(this);
+        String dest = chooser.getFilePath();
+        try {
+            Map<String, Object> parameters = new HashMap<>();
+            LocalDate localFechaInicio = LocalDate.of(2025, 5, 1);
+            LocalDate localFechaFin = LocalDate.of(2025, 5, 31);
+            
+            Date fechaInicio = Date.valueOf(localFechaInicio);
+            Date fechaFin = Date.valueOf(localFechaFin);
+
+            parameters.put("FechaInicio", fechaInicio);
+            parameters.put("FechaFin", fechaFin);
+            reportService.get(REPORT_PATH_INSCRIPTIONS_BY_DATE,parameters).view().toPdf(dest, false);
+        } catch (Exception ex) {
+            Logger.getLogger(MainJasper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnViewAndSaveInscripcionesPorFechaActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSaveInscripcionesPorFecha;
     private javax.swing.JButton btnSaveInscriptions;
     private javax.swing.JButton btnSavePlayers;
+    private javax.swing.JButton btnSaveTorneosPorTenistas;
+    private javax.swing.JButton btnViewAndSaveInscripcionesPorFecha;
     private javax.swing.JButton btnViewAndSaveInscriptions;
     private javax.swing.JButton btnViewAndSavePlayers;
+    private javax.swing.JButton btnViewAndSaveTorneosPorTenistas;
+    private javax.swing.JButton btnViewInscripcionesPorFecha;
     private javax.swing.JButton btnViewInscriptions;
     private javax.swing.JButton btnViewPlayers;
+    private javax.swing.JButton btnViewTorneosPorTenistas;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }

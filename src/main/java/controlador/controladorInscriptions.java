@@ -94,6 +94,12 @@ public class controladorInscriptions {
             String playerName = ventana.getCmbPlayers().getSelectedItem().toString();
             String tournamentName = ventana.getCmbTournaments().getSelectedItem().toString();
 
+            Inscriptions i = insDAO.getInscriptionId(session, Integer.parseInt(ventana.getTxtInscriptionId().getText()));
+            
+            if(i != null){
+                JOptionPane.showMessageDialog(null, "InscriptionId already exists");
+            }
+            
             Players p = plaDAO.getPlayerByName(session, playerName);
             Tournaments t = tourDAO.getTournamentByName(session, tournamentName);
 
