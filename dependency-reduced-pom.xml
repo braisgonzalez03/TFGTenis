@@ -23,22 +23,14 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <transformers>
-                <transformer>
-                  <mainClass>vista.ClubTennis</mainClass>
-                </transformer>
-                <transformer />
-              </transformers>
-              <filters>
-                <filter>
-                  <artifact>*:*</artifact>
-                  <excludes>
-                    <exclude>META-INF/*.SF</exclude>
-                    <exclude>META-INF/*.DSA</exclude>
-                    <exclude>META-INF/*.RSA</exclude>
-                  </excludes>
-                </filter>
-              </filters>
+              <archive>
+                <manifest>
+                  <mainClass>brais.vista.ClubTennis</mainClass>
+                  <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                  </descriptorRefs>
+                </manifest>
+              </archive>
             </configuration>
           </execution>
         </executions>
@@ -60,8 +52,9 @@
     </dependency>
   </dependencies>
   <properties>
-    <maven.compiler.release>23</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.target>8</maven.compiler.target>
     <exec.mainClass>brais.vista.ClubTennis</exec.mainClass>
+    <maven.compiler.source>8</maven.compiler.source>
   </properties>
 </project>
