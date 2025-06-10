@@ -4,14 +4,7 @@
  */
 package controlador;
 
-import static controlador.controladorPlayer.insDAO;
-import static controlador.controladorPlayer.modelTable;
-import static controlador.controladorPlayer.plaDAO;
-import static controlador.controladorPlayer.session;
-import static controlador.controladorPlayer.ventana;
 import controlador.factory.HibernateUtil;
-import java.util.Date;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.PersistenceException;
@@ -22,7 +15,6 @@ import modelo.dao.PlayersDAO;
 import modelo.dao.TournamentsDAO;
 import modelo.vo.Tournaments;
 import org.hibernate.Session;
-import vista.PlayerManager;
 import vista.TournamentManager;
 
 /**

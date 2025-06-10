@@ -43,7 +43,7 @@ public class ClubTennis extends javax.swing.JFrame {
         // Obtener la imagen que se quiere usar como fondo
         Image fondo = new ImageIcon(getClass().getResource("/tenista.png")).getImage();
         
-        // Dibujar la imagen de fondo en el JPanel
+        // Dibujar la imagen de fondo en el JPanel ( imagen de resources )
         g.drawImage(fondo, 0, 0, getWidth(), getHeight(), this);
     }
 

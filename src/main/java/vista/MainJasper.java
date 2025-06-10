@@ -327,7 +327,7 @@ public class MainJasper extends javax.swing.JFrame {
         try {
             Map<String, Object> parameters = new HashMap<>();
             LocalDate localFechaInicio = LocalDate.of(2025, 5, 1);
-            LocalDate localFechaFin = LocalDate.of(2025, 5, 31);
+            LocalDate localFechaFin = LocalDate.of(2025, 6, 1);
             
             Date fechaInicio = Date.valueOf(localFechaInicio);
             Date fechaFin = Date.valueOf(localFechaFin);
@@ -346,7 +346,7 @@ public class MainJasper extends javax.swing.JFrame {
         try {
             Map<String, Object> parameters = new HashMap<>();
             LocalDate localFechaInicio = LocalDate.of(2025, 5, 1);
-            LocalDate localFechaFin = LocalDate.of(2025, 5, 31);
+            LocalDate localFechaFin = LocalDate.of(2025, 6, 1);
             
             Date fechaInicio = Date.valueOf(localFechaInicio);
             Date fechaFin = Date.valueOf(localFechaFin);
@@ -365,7 +365,7 @@ public class MainJasper extends javax.swing.JFrame {
         try {
             Map<String, Object> parameters = new HashMap<>();
             LocalDate localFechaInicio = LocalDate.of(2025, 5, 1);
-            LocalDate localFechaFin = LocalDate.of(2025, 5, 31);
+            LocalDate localFechaFin = LocalDate.of(2025, 6, 1);
             
             Date fechaInicio = Date.valueOf(localFechaInicio);
             Date fechaFin = Date.valueOf(localFechaFin);

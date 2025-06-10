@@ -6,7 +6,6 @@ package controlador;
 
 import Encriptacion.HashContraseñas;
 import controlador.factory.HibernateUtil;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.PersistenceException;
@@ -17,8 +16,6 @@ import modelo.dao.PlayersDAO;
 import modelo.vo.Inscriptions;
 import modelo.vo.Players;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.resource.transaction.spi.TransactionStatus;
 import vista.PlayerManager;
 
 /**

@@ -4,12 +4,10 @@
  */
 package modelo.dao;
 
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JLabel;
-import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import modelo.vo.Tournaments;
 import org.hibernate.Session;
